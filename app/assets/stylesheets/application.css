@@ -1,13 +1,108 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
+table {
+    border-collapse:collapse;
+}
+
+table, th, td {
+    background-color: #ee88bb;
+    border: 2px solid black;
+    padding:5px;
+}
+
+#heading {
+    font-size: 20px;
+    text-align: center;
+}
+
+#title {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+		background: #a90329; /* Old browsers */
+		background: -moz-linear-gradient(top,  #a90329 0%, #8f0222 44%, #6d0019 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a90329), color-stop(44%,#8f0222), color-stop(100%,#6d0019)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #a90329 0%,#8f0222 44%,#6d0019 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #a90329 0%,#8f0222 44%,#6d0019 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #a90329 0%,#8f0222 44%,#6d0019 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #a90329 0%,#8f0222 44%,#6d0019 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
+		color:white;
+    border:2px solid;
+    border-radius:25px;
+    text-align: center;
+}
+
+
+
+#userdetails {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ee88fb;
+    border:1px solid;
+    border-radius:25px;
+    text-align: center;
+}
+
+#errors {
+    width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #F00;
+    border:1px solid;
+    border-radius:25px;
+    text-align: center;
+}
+
+#error {
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #FAA;
+    border:1px solid;
+    border-radius:25px;
+    text-align: center;
+}
+
+#main {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #eeddbb;
+    border:2px solid;
+    border-radius:25px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+body {
+	background: #1e5799; /* Old browsers */
+	background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
+    font-family: "verdana"
+}
+
+h1 {
+	size:179px;
+	color:white;
+}
+
+#title a {
+	text-decoration:none;
+	size:179px;
+	color:#000;
+}
+
+#title a:visited {
+	size:179px;
+	text-decoration:none;
+	color:#000;
+}

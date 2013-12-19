@@ -8,7 +8,22 @@
 </head>
 <body>
 
-<%= yield %>
+	<div id="title">
+		<h1> <%= link_to "Reddit Clone!", "/" %> </h1>
+	</div>
 
+	<% if flash.now[:errors]%>
+		<div id="errors">
+			<% flash.now[:errors].each do |err| %>
+
+				<div id="error"><%= err %></div>
+
+			<% end %>
+		</ul>
+	<% end %>
+
+	<div id="main">
+		<%= yield %>
+	</div>
 </body>
 </html>
