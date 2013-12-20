@@ -1,5 +1,21 @@
 <h2><a href="<%= "http://#{@link.url}" %>"> <%= @link.title %> </a></h2>
 
+<!-- show current vote count -->
+
+<% if @user_vote.nil? %>
+
+	<form action=<%= link_user_votes_url(@link) %> method="POST">
+		<input type="hidden" value="true" name="user_vote[is_up]">
+		<input type="submit" value="Up">
+	</form>
+
+	<form action=<%= link_user_votes_url(@link) %> method="POST">
+		<input type="hidden" value="false" name="user_vote[is_up]">
+		<input type="submit" value="Down">
+	</form>
+<% end %>
+
+
 <p><%= @link.body %></p>
 
 Posted in:

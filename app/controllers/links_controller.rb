@@ -26,6 +26,7 @@ class LinksController < ApplicationController
   def show
     @link = Link.find(params[:id])
     @comments = @link.top_level_comments
+    @user_vote = UserVote.find_by_user_id_and_link_id(current_user.id, @link.id)
     render :show
   end
 end

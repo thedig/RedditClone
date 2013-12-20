@@ -9,7 +9,6 @@
 #  user_id    :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  sub_id     :integer          not null
 #
 
 class Link < ActiveRecord::Base
@@ -19,6 +18,8 @@ class Link < ActiveRecord::Base
   has_many :link_subs
   has_many :subs, :through => :link_subs, :source => :sub
   has_many :comments
+
+  has_many :user_votes
 
   validates :url, :title, :body, :user_id, :presence => true
 

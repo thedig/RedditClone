@@ -17,6 +17,8 @@ class User < ActiveRecord::Base
   has_many :links
   has_many :moderated_subs, :class_name => "Sub", :foreign_key => :user_id
 
+  has_many :user_votes
+
   validates :user_name, :password, :presence => true
   validates :password, :length => { :minimum => 6 }
 

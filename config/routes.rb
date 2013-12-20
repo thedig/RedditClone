@@ -3,6 +3,7 @@ RedditClone::Application.routes.draw do
   resource :session, :only => [:create, :destroy, :new]
   resources :subs
   resources :links do
+    resources :user_votes, :only => [:create]
     resources :comments, :only => [:create, :destroy]
   end
 
