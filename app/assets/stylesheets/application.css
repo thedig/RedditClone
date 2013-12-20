@@ -34,12 +34,12 @@ table, th, td {
 
 
 #userdetails {
-    width: 300px;
+    width: 100%;
     margin: 0 auto;
-    padding: 20px;
-    background-color: #ee88fb;
+    padding: 0px;
+    background-color: #eefffb;
     border:1px solid;
-    border-radius:25px;
+    border-radius:0px;
     text-align: center;
 }
 

@@ -25,6 +25,8 @@ gem 'jquery-rails'
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'better_errors', '>= 0.3.2'
+  gem 'binding_of_caller', '>= 0.6.8'
 end
 
 group :test do

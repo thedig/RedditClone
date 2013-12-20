@@ -1,0 +1,16 @@
+<%= comment.body %>
+
+<form action=<%= link_comments_url(@link) %> method="POST">
+	<label for="body">Comment:</label>
+	<input type="hidden" name="comment[parent_id]" value="<%= comment.id %>">
+	<input type="text" id="body" name="comment[body]">
+	<input type="submit" value="Submit Comment">
+</form>
+
+<ul>
+	<% comment.children.each do |child| %>
+		<li>
+			<%= render "comments/show", :comment => child %>
+		</li>
+	<% end %>
+</ul>

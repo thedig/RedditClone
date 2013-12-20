@@ -8,9 +8,28 @@
 </head>
 <body>
 
+	<div id="userdetails">
+		<table><tr>
+		<% if logged_in? %>
+			<td>Greetings <%= current_user.user_name%>!</td>
+			<td><%= button_to "Sign Out", session_url, :method => :delete%></td>
+			<td><%= button_to "Create Sub", new_sub_url, :method => :get%></td>
+			<td><%= button_to "View Subs", subs_url, :method => :get%></td>
+			<td><%= button_to "New Link", new_link_url, :method => :get%></td>
+		<% else %>
+
+				<td><%= button_to "Sign In", new_session_url, :method => :get%></td>
+				<td><%= button_to "Sign Up", new_user_url, :method => :get%></td>
+
+		<% end %>
+	</tr></table>
+	</div>
+
 	<div id="title">
 		<h1> <%= link_to "Reddit Clone!", "/" %> </h1>
 	</div>
+
+
 
 	<% if flash.now[:errors]%>
 		<div id="errors">
@@ -19,7 +38,7 @@
 				<div id="error"><%= err %></div>
 
 			<% end %>
-		</ul>
+		</div>
 	<% end %>
 
 	<div id="main">

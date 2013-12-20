@@ -9,6 +9,7 @@
 #  user_id    :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  sub_id     :integer          not null
 #
 
 require 'spec_helper'
@@ -34,7 +35,10 @@ describe Link do
 
   context "association tests" do
     it { should belong_to(:user) }
+    it { should have_many(:subs) }
   end
+
+
 
   let(:complete_link) { Link.new(:url => "google.com",
                                  :title => "search engine",

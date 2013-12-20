@@ -1,0 +1,29 @@
+<h2><a href="<%= "http://#{@link.url}" %>"> <%= @link.title %> </a></h2>
+
+<p><%= @link.body %></p>
+
+Posted in:
+<ul>
+	<% @link.subs.each do |sub| %>
+		<li><%= link_to sub.name, sub_url(sub) %></li>
+	<% end %>
+</ul>
+
+<br>
+
+<form action=<%= link_comments_url(@link) %> method="POST">
+	<label for="body">Comment:</label>
+	<input type="text" id="body" name="comment[body]">
+	<input type="submit" value="Submit Comment">
+</form>
+<br>
+
+
+<ul>
+<% @comments.each do |comm| %>
+
+	<li><%= render "comments/show", :comment => comm %></li>
+
+<% end %>
+</ul>
+

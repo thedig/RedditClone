@@ -1,0 +1,13 @@
+<h2>Sub: <%= @sub.name %></h2>
+
+
+<h3>Moderated by <%= @mod.user_name %></h3>
+
+<ul>
+	<% @links.each do |link| %>
+		<li>
+			<a href="<%= "http://#{link.url}" %>"> <%= link.title %> </a>
+			<span><%= link_to("(comments)", link_url(link)) %></span>
+		</li>
+	<% end %>
+</ul>

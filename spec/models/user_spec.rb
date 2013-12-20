@@ -31,6 +31,7 @@ describe User do
 
   context "association tests" do
     it { should have_many(:links) }
+    it { should have_many(:moderated_subs) }
   end
 
   let(:complete_user) { c = User.new(:user_name => "steve", :password => "lololol")}

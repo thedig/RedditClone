@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
   attr_reader :password
 
   has_many :links
+  has_many :moderated_subs, :class_name => "Sub", :foreign_key => :user_id
 
   validates :user_name, :password, :presence => true
   validates :password, :length => { :minimum => 6 }
